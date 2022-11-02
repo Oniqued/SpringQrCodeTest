@@ -22,6 +22,10 @@ public class UserController {
     public String signUp(){
         return "signUp";
     }
+    @GetMapping("/main")
+    public String mainPage(){
+        return "main";
+    }
 
     @Autowired
     UserService userService;
@@ -48,15 +52,5 @@ public class UserController {
         //로그인 성공시
         model.addAttribute("name", userInfoTry.getName());
         return "main";
-    }
-
-    @GetMapping("/coupon")
-    public String couponTab(){
-        return "coupon";
-    }
-
-    @RequestMapping(value = "/buyCoupon", method = RequestMethod.POST)
-    public String buyCoupon(QRcode qrCode){
-        return "coupon";
     }
 }

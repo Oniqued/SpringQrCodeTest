@@ -13,7 +13,6 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @Entity
-
 public class QRcode {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
